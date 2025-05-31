@@ -1,2 +1,16 @@
 @use "@angular/material" as mat;
 @import "tailwindcss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.cdk-drop-list-dragging:not(.elements-menu) {
+  border: 2px solid lightgray !important;
+  background-color: lightgray !important;
+}

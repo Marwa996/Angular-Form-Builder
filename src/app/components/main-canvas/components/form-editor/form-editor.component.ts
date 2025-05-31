@@ -1,3 +1,4 @@
+import { CdkDragDrop, DragDropModule } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,6 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './form-editor.component.html',
   styleUrls: ['./form-editor.component.scss', '../../../../../styles.scss'],
   standalone: true,
-  imports: [],
+  imports: [DragDropModule],
 })
-export class FormEditorComponent { }
+export class FormEditorComponent {
+  onDropInRow(event: CdkDragDrop<string>) {
+    if (event.previousContainer.data === 'field-selector') {
+      //Add our field to the row
+      return
+    }
+  }
+}
