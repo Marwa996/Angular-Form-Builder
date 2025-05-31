@@ -1,10 +1,10 @@
-import { FieldTypeDefinition } from './../models/field';
+import { FieldTypeDefinition } from '../models/field';
 import { Injectable } from '@angular/core';
 
 const TEXT_FIELD_DEFINITION = {
   type: 'text',
   label: 'Text',
-  icon: 'chat',
+  icon: 'text_fields',
 };
 
 const CHECKBOX_FIELD_DEFINITION = {
@@ -21,7 +21,7 @@ export class FieldTypesService {
     ['checkbox', CHECKBOX_FIELD_DEFINITION],
   ]);
 
-  constructor() {}
+  constructor() { }
 
   getAllFieldTypes(): FieldTypeDefinition[] {
     // .values returns an iterator and from because it is a Map
